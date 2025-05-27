@@ -1,0 +1,43 @@
+.head_p{
+    background-color: #0d45be;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: smaller;
+}
+.head_p a{
+    color: rgb(255, 217, 0);
+    text-decoration: none;
+}
+.logo_img img{
+    width: 200px;
+
+}
+.fa{
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    color: blue;
+}
+.fafa_btn{
+    color: white;
+    background-color: blue;
+    border-radius: 13px;
+}
+.gg{
+    box-shadow: 2px 2px 8px gray;
+
+}
+.m-6{
+    margin-left: 130px;
+    
+}
+.d1{
+    padding-top: 80px;
+    padding-left: 100px;
+    
+}
+.d1a h1{
+    font-size: 50px;
+    font-weight: 400;
+}
