@@ -1,180 +1,190 @@
-/* Keyframe Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+:root {
+  --primary: #0c4db3;
+  --primary-dark: #07347a;
+  --accent: #10b981;
+  --bg: #f5f8ff;
+  --text: #11203a;
+  --muted: #5e6b84;
+  --card: #ffffff;
+  --shadow: 0 14px 40px rgba(10, 48, 110, 0.12);
 }
 
-@keyframes slideUp {
-    from { transform: translateY(30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    animation: fadeIn 1s ease-in-out;
-    background: linear-gradient(135deg, #f5f8ff 0%, #e8f2ff 100%);
-    min-height: 100vh;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top right, #e4edff 0%, var(--bg) 45%, #ffffff 100%);
 }
 
 .head_p {
-    background: linear-gradient(90deg, #0d45be 0%, #1a5bbf 100%);
-    color: white;
-    font-weight: 600;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    animation: slideUp 0.8s ease-out;
+  background: linear-gradient(90deg, #032c69, #0f5fcc);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .head_p a {
-    color: gold;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: #ffe28a;
+  text-decoration: none;
 }
 
-.head_p a:hover {
-    color: #ffd700;
-    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(7px);
 }
 
-.fa {
-    padding: 10px;
-    border: 2px solid #0d45be;
-    border-radius: 50%;
-    color: #0d45be;
-    margin: 5px;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.nav-link {
+  font-weight: 600;
+  color: var(--text);
 }
 
-.fa:hover {
-    background: #0d45be;
-    color: white;
-    transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(13, 69, 190, 0.3);
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary);
 }
 
-.fafa_btn {
-    background: linear-gradient(45deg, #0d45be 0%, #1a5bbf 100%);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(13, 69, 190, 0.3);
-    font-weight: 600;
+.btn-brand {
+  background: linear-gradient(135deg, var(--primary), #1e68da);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.fafa_btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(13, 69, 190, 0.5);
-    background: linear-gradient(45deg, #1a5bbf 0%, #0d45be 100%);
+.btn-brand:hover {
+  color: #fff;
+  transform: translateY(-1px);
 }
 
 .hero {
-    padding: 100px 0;
-    background: linear-gradient(135deg, #f5f8ff 0%, #e8f2ff 50%, #d1e7ff 100%);
-    animation: slideUp 1s ease-out;
-    box-shadow: inset 0 0 50px rgba(0,0,0,0.05);
+  padding: 5rem 0 4rem;
 }
 
 .hero h1 {
-    font-size: 48px;
-    background: linear-gradient(45deg, #0d45be 0%, #1a5bbf 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: fadeIn 1.2s ease-out;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.15;
+  font-weight: 800;
 }
 
-.hero ul li {
-    font-size: 18px;
-    margin-bottom: 15px;
-    animation: slideUp 1.4s ease-out;
-    padding: 5px 0;
+.hero p.lead {
+  color: var(--muted);
+  font-size: 1.1rem;
 }
 
-.courses {
-    padding: 90px 0;
-    background: white;
-    box-shadow: 0 0 30px rgba(0,0,0,0.05);
+.badge-soft {
+  background: #e7f0ff;
+  color: var(--primary);
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: inline-block;
 }
 
-.course-card {
-    border: 1px solid #e0e0e0;
-    padding: 40px 30px;
-    border-radius: 15px;
-    transition: all 0.4s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    background: white;
-    animation: slideUp 1.6s ease-out;
+.section-space {
+  padding: 4.5rem 0;
 }
 
-.course-card:hover {
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    transform: translateY(-5px);
-    border-color: #0d45be;
+.section-title {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
 }
 
-.why {
-    background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
-    padding: 90px 0;
-    box-shadow: inset 0 0 50px rgba(0,0,0,0.03);
+.section-subtitle {
+  color: var(--muted);
+  max-width: 760px;
 }
 
-.why i {
-    font-size: 50px;
-    color: #0d45be;
-    margin-bottom: 15px;
-    transition: all 0.3s ease;
-    animation: fadeIn 1.8s ease-out;
+.glass-card,
+.course-card,
+.role-card,
+.info-card {
+  background: var(--card);
+  border: 1px solid #e7ebf3;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
 }
 
-.why i:hover {
-    transform: scale(1.1);
-    color: #1a5bbf;
+.course-card,
+.role-card,
+.info-card {
+  padding: 1.4rem;
+  height: 100%;
 }
 
-.stats {
-    background: linear-gradient(135deg, #0d45be 0%, #1a5bbf 100%);
-    color: white;
-    padding: 80px 0;
-    box-shadow: 0 0 50px rgba(13, 69, 190, 0.3);
-    animation: slideUp 2s ease-out;
+.course-card h5,
+.role-card h5 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.price-tag {
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.quote-block {
+  border-left: 5px solid var(--primary);
+  padding: 1rem 1.2rem;
+  background: #eef4ff;
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+}
+
+.list-clean {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-clean li {
+  margin-bottom: 0.6rem;
+  color: #26344f;
+}
+
+.list-clean li::before {
+  content: "✓";
+  color: var(--accent);
+  margin-right: 0.55rem;
+  font-weight: 800;
 }
 
 footer {
-    background: linear-gradient(135deg, #111 0%, #222 100%);
-    color: white;
-    padding: 40px 0;
-    box-shadow: 0 0 30px rgba(0,0,0,0.3);
-    animation: fadeIn 2.2s ease-out;
+  background: #061730;
+  color: #ced9f5;
 }
 
-/* Additional enhancements */
-.navbar {
-    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-    animation: slideUp 0.6s ease-out;
+footer a {
+  color: #fff;
+  text-decoration: none;
 }
 
-.btn-primary {
-    background: linear-gradient(45deg, #0d45be 0%, #1a5bbf 100%);
-    border: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(13, 69, 190, 0.3);
+.page-hero {
+  padding: 3.5rem 0 2.5rem;
 }
 
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(13, 69, 190, 0.5);
-    background: linear-gradient(45deg, #1a5bbf 0%, #0d45be 100%);
+.table-wrap {
+  overflow-x: auto;
 }
 
-.form-control {
-    border-radius: 10px;
-    border: 2px solid #e0e0e0;
-    transition: all 0.3s ease;
+.table {
+  --bs-table-bg: transparent;
 }
 
-.form-control:focus {
-    border-color: #0d45be;
-    box-shadow: 0 0 10px rgba(13, 69, 190, 0.2);
+.role-grid .role-card {
+  transition: 0.25s ease;
+}
+
+.role-grid .role-card:hover,
+.course-card:hover,
+.info-card:hover {
+  transform: translateY(-4px);
 }
