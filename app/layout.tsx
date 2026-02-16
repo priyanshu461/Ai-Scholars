@@ -3,7 +3,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Ai Scholars ERP",
-  description: "Next.js based lightweight, fully featured ERP starter"
+  description:
+    "Scalable multi-page ERP built with Next.js including multi-role panels, auth, and role-aware AI assistant."
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
